@@ -70,3 +70,23 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+// Task 1
+const disaplayNames = (arr) => {
+  return arr
+    .map(({firstName, lastName, house}) => house === "Gryffindor" ? `${firstName} ${lastName}` : "")
+    .filter(e => e != "");
+}
+disaplayNames(hogwarts).forEach(name => console.log(name));
+
+// Task 2
+const disaplayNamesTwo = (arr) => {
+  return arr
+    .map(({firstName, lastName, pet}) => pet !== null ? `${firstName} ${lastName}` : "")
+    .filter(e => e != "");
+}
+disaplayNamesTwo(hogwarts).forEach(name => console.log(name));
+
+
+
