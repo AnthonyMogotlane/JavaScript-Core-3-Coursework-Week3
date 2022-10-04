@@ -83,7 +83,7 @@ disaplayNames(hogwarts).forEach(name => console.log(name));
 // Task 2
 const disaplayNamesTwo = (arr) => {
   return arr
-    .map(({firstName, lastName, pet}) => pet !== null ? `${firstName} ${lastName}` : "")
+    .map(({firstName, lastName, pet, occupation}) => pet !== null && occupation === "Teacher" ? `${firstName} ${lastName}` : "")
     .filter(e => e != "");
 }
 disaplayNamesTwo(hogwarts).forEach(name => console.log(name));
